@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sarabun:wght@100&display=swap'); /*font-family: 'Sarabun', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /*font-family: 'Bebas Neue', cursive;*/
+
+:root {
+	/*cores*/
+	--cor-borda: #eac075;
+	--cor-fundo-card: #1E1E22;
+	--cor-letras: whitesmoke; 
+	--cor-hover-campo: black;
+	--cor-link: #951826;
+	--cor-hover-submit: #eac075;
+	--cor-hover-link: #eac075;
+	--cor-titulos: #eac075;
+
+	/*Fontes*/
+
+	--font-destaque:'Bebas Neue', cursive;
+	--font-texto: 'Sarabun', sans-serif;
+}
+
+/*TELA DE CADASTRO*/
+body,html {
+	background-image: url("../img/fundo2.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+
+
+.card {
+	padding-top: 10px;
+	border: 3px solid var(--cor-borda);
+	border-radius: 80px 0px 80px 0px;
+	width: 400px;
+	margin-left: 49px;
+	text-align: center;
+	background-color: var(--cor-fundo-card);
+	color: var(--cor-letras);
+}
+
+.campo {
+	font-family: var(--font-texto);
+	cursor: pointer;
+	text-align: center;
+	color: var(--cor-letras);
+	border: solid 1px var(--cor-borda);
+	border-radius: 20px;
+	width: 225px;
+	height: 35px;
+	background-color: transparent;
+	transition: 0.3s;
+}
+
+.campo:hover{
+	background-color: var(--cor-hover-campo);
+}
+
+.link {
+	font-family: var(--font-destaque);
+	cursor: pointer;
+	color: var(--cor-link);
+	text-decoration: none;
+	transition: .3s;
+}
+
+.link:hover {
+	color: var(--cor-hover-link)
+}
+
+.res {
+	font-family: var(--font-destaque);
+	cursor: pointer;
+	text-align: center;
+	border: solid 1px var(--cor-borda);
+	border-radius: 20px;
+	width: 225px;
+	height: 35px;
+	background-color: var(--cor-link);
+	transition: 1s;
+}
+
+.res:hover {
+	background-color: var(--cor-hover-submit);
+}
+
+.logo {
+	width: 100px;
+}
+
+.titulos {
+	text-transform: uppercase;
+	color: var(--cor-titulos);
+	font-family: var(--font-destaque);
+	font-size: 20px
+}
+
+/*media imagem logo página*/
+@media (max-width: 600px) {
+  .logo-apresentacao {
+    width: 200px
+  }
+}
+/*fim media imagem logo página*/
+
+@media (max-width: 600px) {
+.card {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0px 0px 0px 0px;
+}
+}

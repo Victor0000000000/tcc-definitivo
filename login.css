@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sarabun:wght@100&display=swap'); /*font-family: 'Sarabun', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /*font-family: 'Bebas Neue', cursive;*/
+
+:root {
+	/*cores*/
+	--cor-borda: #eac075;
+	--cor-fundo-card: #1E1E22;
+	--cor-letras: whitesmoke; 
+	--cor-hover-campo: black;
+	--cor-link: #951826;
+	--cor-hover-submit: #eac075;
+	--cor-hover-link: #eac075;
+	--cor-titulos: #eac075;
+
+	/*Fontes*/
+
+	--font-destaque:'Bebas Neue', cursive;
+	--font-texto: 'Sarabun', sans-serif;
+}
+
+/*Tela login*/
+body,html {
+	background-image: url("../img/fundo2.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+/*TELA LOGIN*/
+.logo {
+	width: 100px;
+}
+
+.card2 {
+	margin-top: 30px;
+	padding-top: 15px;
+	border: 3px solid var(--cor-borda);
+	border-radius: 80px 0px 80px 0px;
+	width: 400px;
+	height: 590px;
+	margin-left: 55px;
+	text-align: center;
+	background-color: var(--cor-fundo-card);
+	color: var(--cor-letras);
+}
+
+.bot {
+	font-family: var(--font-destaque);
+	text-align: center;
+	border: solid 1px #eac075;
+	border-radius: 20px;
+	width: 225px;
+	height: 35px;
+	background-color: var(--cor-link);
+}
+
+.bot:hover {
+	background-color: var(--cor-hover-submit);
+	transition: 1s;
+}
+
+.campo2 {
+	font-family: var(--font-texto);
+	text-align: center;
+	color: var(--cor-letras);
+	border: solid 1px var(--cor-borda);
+	border-radius: 20px;
+	width: 225px;
+	height: 35px;
+	background-color: transparent;
+}
+
+.campo2:hover {
+	background-color: var(--cor-hover-campo);
+	transition: 0.3s;
+}
+
+.titulos {
+	text-transform: uppercase;
+	color: var(--cor-titulos);
+	font-family: var(--font-destaque);
+	font-size: 20px
+}
+
+.link {
+	font-family: var(--font-destaque);
+	cursor: pointer;
+	color: var(--cor-link);
+	text-decoration: none;
+	transition: .3s;
+}
+
+.link:hover {
+	color: var(--cor-hover-link)
+}
+
+@media (max-width: 600px) {
+.card2 {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0px 0px 0px 0px;
+}
+}
