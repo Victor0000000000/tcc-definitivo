@@ -2,7 +2,7 @@
 include ("valida_session_perfil.php");
 include ("conexao.php");
 
-$sql = "SELECT * FROM usuario WHERE cod = $cod";
+$sql = "SELECT * FROM cadastro WHERE cod = $cod";
 $rs= mysqli_query($conn, $sql);
 $user = mysqli_fetch_array($rs);
 

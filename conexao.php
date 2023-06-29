@@ -1,7 +1,7 @@
 <?php
 
 $servername = "localhost";
-$database = "curtaifc";
+$database = "curtasifc";
 $username = "root";
 $password = "";
 

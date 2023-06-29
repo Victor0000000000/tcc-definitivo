@@ -14,7 +14,7 @@ require "conexao.php";
 	$curso = $_POST ['curso'];
 	$turma= $_POST ['turma'];
 
-		$sql = "INSERT INTO usuario (nome, email, senha, data_nasc, matricula, curso, turma) values ('$nome', '$email', '$senha', '$datanasc', '$matricula', '$curso', '$turma')"; 
+		$sql = "INSERT INTO cadastro (nome, email, senha, data_nasc, matricula, curso, turma) values ('$nome', '$email', '$senha', '$datanasc', '$matricula', '$curso', '$turma')"; 
 
 mysqli_query($conn, $sql); // envia para o banco de dados
 ?>"<script type='text/javascript'>alert('Usuário cadastrado!');</script>";
