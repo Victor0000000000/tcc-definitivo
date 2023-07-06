@@ -30,30 +30,11 @@
 							<p class="titulos">Data de Nascimento</p>
 							<input type="date" name="data_nasc" class="campo" required="date">
 						<br>
-							<p class="titulos">Matricula</p>
-							<input type="text" name="matricula_aluno" class="campo" placeholder="Digite sua matricula" required="text">
-						<br>
-							<p class="titulos">Escolha seu Curso</p>
-            						<select class="campo" name="curso">
-               						<option selected disabled value="" class="campo">Selecione</option>
-                					<option class="campo" value="1">Informática</option>
-                					<option class="campo" value="2">Hospedagem</option>
-            					</select>
+							
+						
             			<br>
 
-            				<p class="titulos">Escolha sua Turma</p>
-            				<select class="campo" name="turma">
-            				<option selected disabled value="" class="campo">Selecione</option>
-                					<option class="campo" value="1">1°A</option>
-                					<option class="campo" value="2">1°B</option>
-                					<option class="campo" value="3">1°H</option>
-                					<option class="campo" value="4">2°A</option>
-                					<option class="campo" value="5">2°B</option>
-                					<option class="campo" value="6">2°H</option>
-                					<option class="campo" value="7">3°A</option>
-                					<option class="campo" value="8">3°B</option>
-                					<option class="campo" value="9">3°H</option>
-            					</select>
+					
             			<br><br>
             					<p><input type="submit" name="enviar" class="res" value="Registrar"></p>
             		

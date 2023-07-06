@@ -10,3 +10,7 @@ if (!isset($_SESSION['cod'])) {
     $cod = $_SESSION['cod'];
 }
 ?>
+
+alterar o nome da tabela cadastro pára usuarios
+retirar as colunas matricula, turma
+adicionar uma coluna para diferenciar ususarios comuns dos administradores

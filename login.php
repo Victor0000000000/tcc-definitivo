@@ -24,8 +24,7 @@ require ("conexao.php");?>
 						<p class="titulos">Nome</p>
 						<input type="text" name="nome_aluno" class="campo2" placeholder="Digite seu nome">
 					<br>
-						<p class="titulos">Matricula</p>
-						<input type="text" name="matricula_aluno" class="campo2" placeholder="Digite sua matricula">
+						
 					<br>
 						<p class="titulos">Senha</p>
 						<input type="password" name="senha_aluno" class="campo2" placeholder="Digite sua senha">
@@ -35,7 +34,7 @@ require ("conexao.php");?>
 						</p>
 				
 						<p>
-							<a class="link" href="telacadastro.php">Ainda não possui cadastro?</a>
+							<a class="link" href="index.php">Ainda não possui cadastro?</a>
 						</p>
 
 					<!--	<p>
