@@ -92,7 +92,7 @@ include ("conexao.php");
 
 <?php
 
-$sql = "SELECT * FROM usuario WHERE cod = $cod";
+$sql = "SELECT * FROM usuarios WHERE cod = $cod";
 $rs= mysqli_query($conn, $sql);
 $user = mysqli_fetch_array($rs);
 

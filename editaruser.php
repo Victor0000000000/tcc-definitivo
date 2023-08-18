@@ -6,7 +6,7 @@ $cod = $_POST['cod'];
 $nome = $_POST['nome'];
 //$senha = $_POST['senha'];
 
-$sql = "UPDATE usuario SET nome='$nome' WHERE cod=$cod";
+$sql = "UPDATE usuarios SET nome='$nome' WHERE cod=$cod";
 $query = mysqli_query($conn, $sql);
 
 if (mysqli_affected_rows($conn) > 0) {
