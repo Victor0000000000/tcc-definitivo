@@ -220,6 +220,10 @@ $nivel_necessario = 1;
   </div>
 
 </footer>
+<a href ="sair.php">Clique aqui para delogar de adiministrador</a>
+
+
+
 
 </body>
 </html> 

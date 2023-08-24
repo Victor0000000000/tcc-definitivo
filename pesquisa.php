@@ -13,9 +13,14 @@
 <?php
 include('conexao.php');
 
-$Tema = $_POST['Tema'];
-$Ano = $_POST['Ano'];
-$Genero = $_POST['Genero'];
+
+$Tema = $_POST['tema'];
+$Ano = $_POST['ano'];
+$Genero = $_POST['genero'];
+echo   $_POST['tema'];
+echo  $_POST['ano'];
+echo $_POST['genero'];
+
 
 $sql = "SELECT * FROM curta WHERE Genero = $Genero AND Tema = $Tema AND ano = $Ano";
 $rs= mysqli_query($conn, $sql);
@@ -32,6 +37,14 @@ if (mysqli_num_rows($rs) > 0) {
 } else { ?> 
   <script type='text/javascript'> alert ('Erro!') </script>
    <?php header('location: curtas.php');
+}
+if (isset($_POST['tema']) && isset($_POST['ano']) && isset($_POST['genero'])) {
+  $Tema = $_POST['tema'];
+  $Ano = $_POST['ano'];
+  $Genero = $_POST['genero'];
+  // ... resto do seu código ...
+} else {
+  echo "Campos não preenchidos corretamente.";
 }
 
 ?> 

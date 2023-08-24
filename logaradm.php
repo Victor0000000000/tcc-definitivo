@@ -39,10 +39,15 @@ if(isset($_POST['email']) && isset($_POST['senha'])) {
 
     if($num == 1){
         // Fazer alguma coisa se o login for bem-sucedido
+        $adm = $percorrer['adm'];
+        $nome = $percorrer['nome'];
+
+        session_start();
+       
         header("Location: curtas.php");
         exit;
     } else {
-        echo 'O email ou senha foram digitados incorretamente';
+        echo 'Voce não possui o nivel de acesso nescessarios';
     }
 }
 
