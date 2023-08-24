@@ -13,11 +13,11 @@
 <?php
 include('conexao.php');
 
-$tema = $_POST['tema'];
-$ano = $_POST['ano'];
-$genero = $_POST['genero'];
+$Tema = $_POST['Tema'];
+$Ano = $_POST['Ano'];
+$Genero = $_POST['Genero'];
 
-$sql = "SELECT * FROM curta WHERE genero = $genero AND tema = $tema AND ano = $ano";
+$sql = "SELECT * FROM curta WHERE Genero = $Genero AND Tema = $Tema AND ano = $Ano";
 $rs= mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($rs) > 0) {

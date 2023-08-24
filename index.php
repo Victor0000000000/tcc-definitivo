@@ -42,6 +42,10 @@
             				<p class="link">
                 			<a class="link" href="login.php">Já possui cadastro?</a>
            					</p>
+							   <p class="link">
+                			<a class="link" href="loginadm.php">Entre como adiministrador</a>
+           					</p>
+
 
 					</div>
 

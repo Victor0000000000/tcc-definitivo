@@ -92,14 +92,14 @@ include ("conexao.php");
 
 <?php
 
-$sql = "SELECT * FROM usuarios WHERE cod = $cod";
+$sql = "SELECT * FROM adm WHERE adm = $cod";
 $rs= mysqli_query($conn, $sql);
-$user = mysqli_fetch_array($rs);
+$adm = mysqli_fetch_array($rs);
 
-$nivel_necessario = 2;
+$nivel_necessario = 1;
 
   // Verifica se não há a variável da sessão que identifica o usuário
-  if ($user['nivel'] == $nivel_necessario) { ?>
+  if ($adm['adm'] == $nivel_necessario) { ?>
         <div class="btn-curta">
     <button class="btn-add">Adicionar Curta</button>
   </div>
