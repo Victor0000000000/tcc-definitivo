@@ -4,7 +4,7 @@
 
 :root {
   /*CORES*/
-  --cor-body: #181a19;
+  --cor-body: #eff7f3;
   --cor-light-mode: #f5f5f5;
   --cor_bot: #eac075;
   --cor-hover-bot: #f5f5f5;
@@ -14,7 +14,7 @@
   --cor-letras-navbar: #eac075;
   --cor_navbar: #951826;
   --cor_texto-inicial: rgb(240, 240, 240);
-  --cor_texto: #000000;
+  --cor_texto: #ffffff;
   --cor-letras-lightmode: rgb(15, 15, 15);
 
   /*cor-modal*/

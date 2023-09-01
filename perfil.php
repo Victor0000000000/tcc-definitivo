@@ -1,10 +1,13 @@
 <?php
-include ("valida_session_perfil.php");
+//include ("valida_session_perfil.php");
 include ("conexao.php");
 
-$sql = "SELECT * FROM usuarios WHERE cod = $cod";
-$rs= mysqli_query($conn, $sql);
-$user = mysqli_fetch_array($rs);
+session_start();
+
+if (!isset($_SESSION['cod'])) {
+  session_destroy();
+  header('Location:index.php');
+} 
 
 ?>
 
@@ -135,5 +138,12 @@ $user = mysqli_fetch_array($rs);
 </div>
 
 </footer>
+
+
+
+
+
+
+
 </body>
 </html> 

@@ -18,7 +18,7 @@ $res = mysqli_query($conn, $sql);
 $row = mysqli_fetch_array($res);
 
 if (!empty($row)) { // se existe o usuario
-    $_SESSION['cod'] = $row['cod']; // código do usuário
+    $_SESSION['cod'] = $row['codusu']; // código do usuário
     $_SESSION['adm'] = $row['administrador'];
     header('Location:telainicial.php');
 } else { // se nao exite o usuario

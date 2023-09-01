@@ -1,8 +1,16 @@
 <?php
-//include ("valida_session_curta.php");
-//include ("conexao.php");
+//include ("valida_session_perfil.php");
+include ("conexao.php");
+
+session_start();
+
+if (!isset($_SESSION['cod'])) {
+  session_destroy();
+  header('Location:index.php');
+} 
 
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -32,6 +40,7 @@
         <li><a class="link-menu" href="oficinas.php">Oficinas</a></li>
         <li><a class="link-menu" href="premiacao.php">Premiações</a></li>
         <li><a class="link-menu" href="perfil.php">Perfil</a></li>
+        <li><a class="link-menu" href="curtacad.php">cadastro Curtas</a></li>
         <li><a class="link-menu" href="logout.php"><i class="fas fa-sign-out-alt"></i></a></li>
       </ul>
     </nav>

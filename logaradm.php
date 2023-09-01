@@ -44,7 +44,7 @@ if(isset($_POST['email']) && isset($_POST['senha'])) {
 
         session_start();
        
-        header("Location: curtas.php");
+        header("Location: curtacad.php");
         exit;
     } else {
         echo 'Voce não possui o nivel de acesso nescessarios';

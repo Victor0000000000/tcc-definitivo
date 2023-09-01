@@ -1,6 +1,9 @@
 <?php
 include ("valida_session_curta.php");
 include ("conexao.php");
+session_start();
+if ((!isset($_SESSION['codusu']))) {
+  echo '<script>alert("Nescessario a criação de conta"); window.location.href = "index.php";</script>';}
 
 ?>
 
@@ -220,7 +223,7 @@ $nivel_necessario = 1;
   </div>
 
 </footer>
-<a href ="sair.php">Clique aqui para delogar de adiministrador</a>
+
 
 
 
