@@ -1,9 +1,9 @@
 <?php
 include ("valida_session_curta.php");
 include ("conexao.php");
-session_start();
-if ((!isset($_SESSION['codusu']))) {
-  echo '<script>alert("Nescessario a criação de conta"); window.location.href = "index.php";</script>';}
+//session_start();
+if ((!isset($_SESSION['cod']))) {
+echo '<script>alert("Nescessario a criação de conta"); window.location.href = "index.php";</script>';}
 
 ?>
 
@@ -95,7 +95,7 @@ if ((!isset($_SESSION['codusu']))) {
 
 <?php
 
-$sql = "SELECT * FROM adm WHERE adm = $cod";
+$sql = "SELECT * FROM usuarios WHERE adm = $cod";
 $rs= mysqli_query($conn, $sql);
 $adm = mysqli_fetch_array($rs);
 

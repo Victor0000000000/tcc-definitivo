@@ -43,7 +43,14 @@ body,html {
 	text-align: center;
 	background-color: var(--cor-fundo-card);
 	color: var(--cor-letras);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+
+
 
 .bot {
 	font-family: var(--font-destaque);

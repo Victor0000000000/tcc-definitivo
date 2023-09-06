@@ -1,3 +1,16 @@
+<?php
+//include ("valida_session_perfil.php");
+include ("conexao.php");
+
+session_start();
+//echo $_SESSION['adm'];
+if ($_SESSION['adm']===0) {
+  session_destroy();
+  header('Location:index.php');
+} 
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/36b801b814.js" crossorigin="anonymous"></script>
   <title>Cadastrar Curta</title>
-  <link rel="stylesheet" href="curtas.css">
+  <!-- <link rel="stylesheet" href="curtas.css"> -->
 </head>
 
 <body>

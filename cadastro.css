@@ -18,9 +18,8 @@
 	--font-texto: 'Sarabun', sans-serif;
 }
 
-/*TELA DE CADASTRO*/
 body,html {
-	background-image: url("/img/a.png");
+	background-image: url("/img/tapete.png"); /* Substitua com o caminho correto para a sua imagem */
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -29,8 +28,14 @@ body,html {
 
 
 
+
 .card {
-	padding-top: 10px;
+	
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 10px;
 	border: 3px solid var(--cor-borda);
 	border-radius: 80px 0px 80px 0px;
 	width: 400px;

@@ -8,7 +8,7 @@ if (!isset($_SESSION['cod'])) {
     header('Location: curtas.php');
 } else {
     $cod = $_SESSION['cod'];
-    header('Location: telainicial.php');
+    //header('Location: telainicial.php');
 }
 
 ?>
