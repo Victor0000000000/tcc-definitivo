@@ -8,7 +8,6 @@ if (!isset($_SESSION['cod'])) {
   session_destroy();
   header('Location:index.php');
 } 
-
 ?>
 
 <!DOCTYPE html>
