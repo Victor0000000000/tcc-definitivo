@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sarabun:wght@100&display=swap'); /*font-family: 'Sarabun', sans-serif;*/
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /*font-family: 'Bebas Neue', cursive;*/
 body {
-	background-image: url(../img/tapete.jpg);
+	background-image: url('img/tapete.jpg');
 	background-repeat: no-repeat;
-	background-size: auto;
+	background-size: cover;
 }
 
 :root {

@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sarabun:wght@100&display=swap'); /*font-family: 'Sarabun', sans-serif;*/
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /*font-family: 'Bebas Neue', cursive;*/
+body {
+	background-image: url('img/tapete.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
 :root {
 	/*cores*/
@@ -18,16 +23,15 @@
 	--font-texto: 'Sarabun', sans-serif;
 }
 
-/*Tela login*/
-body,html {
-	background-image: url("../img/fundo2.jpeg");
+/* body,html {
+	background-image: url("img/fundo2.jpeg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
-}
+} */
 
-/*TELA LOGIN*/
+
 .logo {
 	width: 100px;
 }
