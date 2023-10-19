@@ -2,8 +2,13 @@
 session_start();
 $curtas= 0;
 if ($_SESSION['adm'] == 0) {
-    $curtas = "hidden-content";
+    $curtas = "invisivel";
+} 
+
+if ($_SESSION['adm'] == 1) {
+  $curtas = "";
 }
+
 
 //include ("valida_session_perfil.php");
 include ("conexao.php");

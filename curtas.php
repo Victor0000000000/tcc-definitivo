@@ -1,4 +1,5 @@
 <?php
+session_start();
 include ("valida_session_curta.php");
 include ("conexao.php");
 //session_start();
@@ -16,10 +17,12 @@ echo '<script>alert("Nescessario a criação de conta"); window.location.href = 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/36b801b814.js" crossorigin="anonymous"></script>
   <title>Curtas</title>
-  <link rel="stylesheet" href="curtas.css">
+ 
 </head>
 
 <body>
+<link rel="stylesheet" href="curtas.css">
+
   <header id="header">
     <a id="logo" href="index.php"><img id="img_logo" src="img/logopng.png"></a>
     <nav id="nav">
@@ -101,7 +104,7 @@ $adm = mysqli_fetch_array($rs);
 
 $nivel_necessario = 1;
 
-  // Verifica se não há a variável da sessão que identifica o usuário
+  
   if ($adm['adm'] == $nivel_necessario) { ?>
         <div class="btn-curta">
     <button class="btn-add">Adicionar Curta</button>
