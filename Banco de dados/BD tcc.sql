@@ -16,6 +16,7 @@ CREATE TABLE curta (
      Ano INT,
      Tema int,
      Genero int,
+     titulo varchar(100),
  
 
 FOREIGN KEY (Ano) REFERENCES ano (cod),

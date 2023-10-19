@@ -1,8 +1,12 @@
 <?php
+session_start();
+$curtas= 0;
+if ($_SESSION['adm'] == 0) {
+    $curtas = "hidden-content";
+}
+
 //include ("valida_session_perfil.php");
 include ("conexao.php");
-
-session_start();
 
 if (!isset($_SESSION['cod'])) {
   session_destroy();
@@ -35,11 +39,12 @@ if (!isset($_SESSION['cod'])) {
           <button onclick="myFunction()" class="bot"><i class="fas fa-sun"></i></button>
         </li>
 
-        <li><a class="link-menu" href="curtas.php">Curtas</a></li>
-        <li><a class="link-menu" href="oficinas.php">Oficinas</a></li>
+       <div class="<?php echo $curtas; ?>"> <li><a class="link-menu" href="curtas.php">Curtas</a></li>
+       </div>
+       <li><a class="link-menu" href="oficinas.php">Oficinas</a></li>
         <li><a class="link-menu" href="premiacao.php">Premiações</a></li>
         <li><a class="link-menu" href="perfil.php">Perfil</a></li>
-        <li><a class="link-menu" href="curtacad.php">cadastro Curtas</a></li>
+      
         <li><a class="link-menu" href="logout.php"><i class="fas fa-sign-out-alt"></i></a></li>
       </ul>
     </nav>
