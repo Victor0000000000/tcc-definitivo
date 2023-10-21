@@ -47,6 +47,7 @@ if (!isset($_SESSION['cod'])) {
        <div class="<?php echo $curtas; ?>"> <li><a class="link-menu" href="curtas.php">Curtas</a></li>
        </div>
        <li><a class="link-menu" href="oficinas.php">Oficinas</a></li>
+       <li><a class="link-menu" href="Galeria.php">Vote</a></li>
         <li><a class="link-menu" href="premiacao.php">Premiações</a></li>
         <li><a class="link-menu" href="perfil.php">Perfil</a></li>
       

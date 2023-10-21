@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<!-- Favor de olhas o cadastro.css e tentar colocar a imagem de fundo de alguma forma não esta indo. -->
+
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
