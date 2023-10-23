@@ -1,39 +1,46 @@
 <?php
 include('conexao.php');
-
+$uploaddir = "Curta/";
 $uploaddir = "poster/";
 $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
 
-echo $uploadfile;
-
+// Verifica se o diretório de upload é gravável
 if (!is_writable($uploaddir)) {
     echo 'O diretório não possui permissão de escrita.';
+    exit;
 }
 
-echo '<pre>';
+// Verifica se o arquivo é uma imagem (extensões permitidas: jpg, png, gif)
+$allowed_extensions = array('jpg', 'png', 'gif');
+$file_extension = pathinfo($_FILES['userfile']['name'], PATHINFO_EXTENSION);
+if (!in_array($file_extension, $allowed_extensions)) {
+    echo 'Apenas arquivos de imagem são permitidos (jpg, png, gif).';
+    exit;
+}
 
+// Move o arquivo para o diretório de upload
 if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
-    echo "Arquivo válido e enviado com sucesso.\n";
+    echo "Arquivo enviado com sucesso.";
 } else {
-    echo "Possível ataque de upload de arquivo!\n";
+    echo "Erro ao enviar o arquivo.";
+    exit;
 }
 
-
+// Sanitize e validar outros dados do formulário
+$ano = mysqli_real_escape_string($conn, $_POST['ano']);
+$titulo = mysqli_real_escape_string($conn, $_POST['titulo']);
+$duracao = mysqli_real_escape_string($conn, $_POST['duracao']);
+$sinopse = mysqli_real_escape_string($conn, $_POST['sinopse']);
+$tema = mysqli_real_escape_string($conn, $_POST['tema']);
+$genero = mysqli_real_escape_string($conn, $_POST['genero']);
+$turma = mysqli_real_escape_string($conn, $_POST['turma']);
 
 // Verifica se o ano existe na tabela ano
-$ano = mysqli_real_escape_string($conn, $_POST['ano']); // Sanitize o valor antes de usar na consulta SQL
-$anoExistente = mysqli_query($conn, "SELECT cod FROM ano WHERE cod = $ano");
+$anoExistente = mysqli_query($conn, "SELECT ano FROM ano WHERE cod = $ano");
 
 if (mysqli_num_rows($anoExistente) > 0) {
     // O ano existe na tabela ano, pode inserir na tabela curta
-    $titulo = mysqli_real_escape_string($conn, $_POST['titulo']);
-    $duracao = mysqli_real_escape_string($conn, $_POST['duracao']);
-    $sinopse = mysqli_real_escape_string($conn, $_POST['sinopse']);
-    $tema = mysqli_real_escape_string($conn, $_POST['tema']);
-    $genero = mysqli_real_escape_string($conn, $_POST['genero']);
-    $turma = mysqli_real_escape_string($conn, $_POST['turma']);
     $poster = mysqli_real_escape_string($conn, basename($_FILES['userfile']['name']));
-
     $sql = "INSERT INTO curta (titulo, duracao, sinopse, tema, genero, ano, turma, poster) VALUES ('$titulo', '$duracao', '$sinopse', '$tema', '$genero', '$ano', '$turma', '$poster')";
     
     if (mysqli_query($conn, $sql)) {
@@ -41,12 +48,10 @@ if (mysqli_num_rows($anoExistente) > 0) {
     } else {
         echo "Erro ao cadastrar o curta: " . mysqli_error($conn);
     }
-} else {
-    // O ano não existe na tabela ano, você pode adicionar o ano primeiro ou mostrar uma mensagem de erro
-    echo "O ano não existe na tabela ano. Adicione o ano antes de cadastrar o curta.";
+} 
+if (empty($_POST['ano']) || empty($_POST['titulo']) || empty($_POST['duracao']) || empty($_POST['sinopse']) || empty($_POST['tema']) || empty($_POST['genero']) || empty($_POST['turma'])) {
+    header("Location: curtas.php?erro=Campos obrigatórios não preenchidos");
+    exit;
 }
-
-print_r($_FILES);
-
-print "</pre>";
+mysqli_close($conn);
 ?>

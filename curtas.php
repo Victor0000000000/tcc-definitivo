@@ -106,7 +106,7 @@ $adm = mysqli_fetch_array($rs);
 $nivel_necessario = 1;
 
   
-  if ($adm['adm'] == $nivel_necessario) { ?>
+  if ($adm['adm'] = $nivel_necessario) { ?>
         <div class="btn-curta">
     <button class="btn-add">Adicionar Curta</button>
   </div>
@@ -127,7 +127,12 @@ $nivel_necessario = 1;
         <input type="time" name="duracao" class="input-modificar" placeholder="Digite a duração do Curta">
       </p>
       <p class="alinhar"> 
-        Enviar arquivo:
+        Enviar Curta:
+      <input name="userfile" type="file" />
+      <input type="hidden" name="MAX_FILE_SIZE" value="50000000" /> 
+      </p>
+      <p class="alinhar"> 
+        Enviar poster:
       <input name="userfile" type="file" />
       <input type="hidden" name="MAX_FILE_SIZE" value="50000000" /> 
       </p>
