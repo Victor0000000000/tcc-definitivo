@@ -97,6 +97,7 @@ echo '<script>alert("Nescessario a criação de conta, voce será redirecionada 
 </form>
 
 <?php
+
 $_SESSION['cod'];
 $sql = "SELECT * FROM usuarios WHERE adm = $cod";
 $rs= mysqli_query($conn, $sql);
@@ -114,7 +115,7 @@ $nivel_necessario = 1;
 <div id="modal-curta" class="modal-container">
   <div class="modal">
 
-    <form enctype="multipart/form-data" action="../php/upload.php" method="POST">
+    <form enctype="multipart/form-data" action="upload.php" method="POST">
       <button class="fechar">X</button>
       <p class="alinhar">
         <input type="text" name="titulo" class="input-modificar" placeholder="Digite o nome do Curta">
@@ -157,9 +158,7 @@ $nivel_necessario = 1;
           <option value="22">2037</option>
         </select>
       </p>
-      <p class="alinhar">
-        <input type="text" name="video" class="input-modificar" placeholder="Insira o link do Curta">
-      </p>
+      
       <p>
         <select class="input-modificar" name="turma">
           <option selected disabled value="">Qual turma produziu</option>
