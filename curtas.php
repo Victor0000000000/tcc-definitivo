@@ -24,7 +24,7 @@ echo '<script>alert("Nescessario a criação de conta, voce será redirecionada 
 <link rel="stylesheet" href="curtas.css">
 
   <header id="header">
-    <a id="logo" href="index.php"><img id="img_logo" src="img/logopng.png"></a>
+    <a id="logo" href="telainicial.php"><img id="img_logo" src="img/logopng.png"></a>
     <nav id="nav">
       <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
         <span id="hamburger"></span>

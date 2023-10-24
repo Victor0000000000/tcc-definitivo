@@ -1,26 +1,42 @@
 <?php
-include_once("conexao.php");
+include('conexao.php');
+// Conexão com o banco de dados (substitua pelas suas informações de conexão)
+
+
+// Verificar a conexão
+if (!$conn) {
+    die("Falha na conexão com o banco de dados: " . mysqli_connect_error());
+}
+
+// Consulta ao banco de dados para obter as imagens
+$sql = "SELECT * FROM curta";
+$result = mysqli_query($conn, $sql);
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria</title>
+    <title>Galeria de Imagens</title>
 </head>
 <body>
-    <h1>Listar</h1>
 
-    <a href="votar.php">rggrrgddff</a>
+<!-- Exibir imagens da galeria -->
+<div class="galeria">
     <?php
-    $result_produto = "SELECT * FROM curta";
-    $resultado_produto = mysqli_query($conn, $result_produto);
-
-    while($row_produto = mysqli_fetch_assoc($resultado_produto)){
-        echo "video ". $row_produto['id'] . "<br>";
+    // Loop para exibir as imagens
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo '<img src="' . $row['poster'] . '" alt="' . $row['nome'] . '">';
     }
     ?>
-    
+</div>
+
 </body>
 </html>
+
+<?php
+// Fechar conexão com o banco de dados
+mysqli_close($conn);
+?>
