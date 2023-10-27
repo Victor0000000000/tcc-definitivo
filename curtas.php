@@ -126,16 +126,16 @@ $nivel_necessario = 1;
       <p class="alinhar">
         <input type="time" name="duracao" class="input-modificar" placeholder="Digite a duração do Curta">
       </p>
-      <p class="alinhar"> 
-        Enviar Curta:
-      <input name="userfile" type="file" />
-      <input type="hidden" name="MAX_FILE_SIZE" value="50000000" /> 
-      </p>
-      <p class="alinhar"> 
-        Enviar poster:
-      <input name="userfile" type="file" />
-      <input type="hidden" name="MAX_FILE_SIZE" value="50000000" /> 
-      </p>
+        <p class="alinhar"> 
+          Enviar Curta:
+        <input name="video" type="file" />
+        <input type="hidden" name="MAX_FILE_SIZE" value="50000000" /> 
+        </p>
+        <p class="alinhar"> 
+          Enviar poster:
+        <input name="poster" type="file" />
+        <input type="hidden" name="MAX_FILE_SIZE" value="50000000" /> 
+        </p>
       <p class="alinhar">
           <select name="ano" class="input-modificar">
           <option selected disabled value="">Ano de produção</option>
@@ -162,8 +162,18 @@ $nivel_necessario = 1;
           <option value="21">2036</option>
           <option value="22">2037</option>
         </select>
+      <center> </p>
+      <select class="input-modificar" name="categoria">
+          <option selected disabled value="">categoria indicada</option>
+          <option value="1">Melhor curta</option>
+          <option value="2">Melhor protagonista</option>
+          <option value="3">melhor representatividade</option>
+          <option value="4">Melhor participação especial</option>
+          <option value="5">Melhor edição</option>
+          <option value="6">Melhor personagem feminina</option>
+        </select>
       </p>
-      
+  </center>
       <p>
         <select class="input-modificar" name="turma">
           <option selected disabled value="">Qual turma produziu</option>
