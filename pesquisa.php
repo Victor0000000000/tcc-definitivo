@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,6 +8,7 @@
   <script src="https://kit.fontawesome.com/36b801b814.js" crossorigin="anonymous"></script>
   <title>Curtas</title>
   <link rel="stylesheet" href="curtas.css">
+  
 </head>
 
 <body>
@@ -19,10 +19,11 @@ include('conexao.php');
 $tema = $_POST['tema'] ?? '';
 $ano = $_POST['ano'] ?? '';
 $genero = $_POST['genero'] ?? '';
+$categoria = $_POST['categoria'] ?? '';
 
 // Verifica se os campos de filtro foram preenchidos
-if (!empty($tema) && !empty($ano) && !empty($genero)) {
-    $sql = "SELECT * FROM curta WHERE genero = '$genero' AND tema = '$tema' AND ano = '$ano'";
+if (!empty($tema) && !empty($ano) && !empty($genero) && !empty($categoria)) {
+    $sql = "SELECT * FROM curta WHERE genero = '$genero' AND tema = '$tema' AND ano = '$ano' AND categoria ='$categoria' AND poster = '$poster' AND video = '$video' ";
     $rs = mysqli_query($conn, $sql);
 
     if ($rs && mysqli_num_rows($rs) > 0) {
@@ -39,10 +40,20 @@ if (!empty($tema) && !empty($ano) && !empty($genero)) {
             <?php
         }
     } else {
-        echo '<script type="text/javascript">alert("Nenhum curta encontrado."); window.location.href = "curtas.php";</script>';
+        // Nenhum curta encontrado, exibir alerta
+        ?>
+        <script>
+            window.alert("Nenhum curta foi encontrado com os critérios de pesquisa informados.");
+        </script>
+        <?php
     }
 } else {
-    echo '<script type="text/javascript">alert("Preencha todos os campos."); window.location.href = "curtas.php";</script>';
+    // Campos de filtro não preenchidos, exibir alerta
+    ?>
+    <script>
+        window.alert("Por favor, preencha todos os campos de filtro para realizar a pesquisa.");
+    </script>
+    <?php
 }
 
 mysqli_close($conn);

@@ -232,7 +232,10 @@ body{
 
 /*MODAL DE ADIÇÃO*/
 .alinhar {
-  text-align: center;
+  text-align:center ;
+}
+.alinhar2{
+  text-align: right;
 }
 .modal-container {
   width: 100vw;

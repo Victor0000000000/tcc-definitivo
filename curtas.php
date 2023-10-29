@@ -115,7 +115,7 @@ $nivel_necessario = 1;
 <div id="modal-curta" class="modal-container">
   <div class="modal">
 
-    <form enctype="multipart/form-data" action="upload.php" method="POST">
+    <form enctype="multipart/form-data" action="curtacad.php" method="POST">
       <button class="fechar">X</button>
       <p class="alinhar">
         <input type="text" name="titulo" class="input-modificar" placeholder="Digite o nome do Curta">
@@ -126,7 +126,8 @@ $nivel_necessario = 1;
       <p class="alinhar">
         <input type="time" name="duracao" class="input-modificar" placeholder="Digite a duração do Curta">
       </p>
-        <p class="alinhar"> 
+      
+      <p class="alinhar"> 
           Enviar Curta:
         <input name="video" type="file" />
         <input type="hidden" name="MAX_FILE_SIZE" value="50000000" /> 
@@ -136,6 +137,7 @@ $nivel_necessario = 1;
         <input name="poster" type="file" />
         <input type="hidden" name="MAX_FILE_SIZE" value="50000000" /> 
         </p>
+     
       <p class="alinhar">
           <select name="ano" class="input-modificar">
           <option selected disabled value="">Ano de produção</option>
