@@ -42,7 +42,7 @@ echo '<script>alert("Nescessario a criação de conta, voce será redirecionada 
 
 <main>
   <div class="logo-pagina">
-    <img class="logo-apresentacao" src="img/logopreto.jpeg" alt="logo do projeto">
+    <img class="logo-apresentacao" src="img/logopreto.PNG" alt="logo do projeto">
   </div>
 
   <form action="pesquisa.php" method="POST">

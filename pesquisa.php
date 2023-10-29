@@ -15,6 +15,7 @@
 
 <?php
 include('conexao.php');
+include('curtacad.php');
 
 $tema = $_POST['tema'] ?? '';
 $ano = $_POST['ano'] ?? '';
