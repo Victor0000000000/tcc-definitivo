@@ -16,26 +16,28 @@ function toggleMenu(event) {
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
 
-//lightmode
+// Lightmode
 function myFunction() {
   var element = document.body;
   element.classList.toggle("lightmode");
 }
 
-//MODAL 
+// Modal
 function iniciaModal(modalID) {
-  const modal = document.getElementById(modalID)
-  if(modal) {
+  const modal = document.getElementById(modalID);
+  if (modal) {
     modal.classList.add('mostrar');
-      modal;addEventListener('click', (e) => {
-      if(e.target.id == modalID || e.target.className == 'fechar') {
+    modal.addEventListener('click', (e) => {
+      if (e.target.id == modalID || e.target.className == 'fechar') {
         modal.classList.remove('mostrar');
-        
+        e.stopPropagation(); // Impede a propagação do evento para o elemento modal
       }
     });
   }
 }
 
-const addCurta = document.querySelector('.btn-add')
-addCurta.addEventListener('click', () => iniciaModal('modal-curta'));
-
+const addCurta = document.querySelector('.btn-add');
+addCurta.addEventListener('click', (e) => {
+  e.stopPropagation(); // Impede a propagação do evento para o elemento modal
+  iniciaModal('modal-curta');
+});
