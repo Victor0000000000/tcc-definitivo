@@ -14,7 +14,12 @@ if (mysqli_affected_rows($conn) > 0) {
 } else {
     echo "<script>alert('.');</script>";
 }*/
+session_start();
 
+if (!isset($_SESSION['cod'])) {
+  session_destroy();
+  header('Location:index.php');
+}
 include("valida_session_perfil.php");
 include('conexao.php');
 

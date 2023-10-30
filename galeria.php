@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!isset($_SESSION['cod'])) {
+  session_destroy();
+  header('Location:index.php');
+} 
 include("conexao.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['curta_id']) && isset($_POST['voto'])) {

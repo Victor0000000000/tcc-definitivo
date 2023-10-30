@@ -75,6 +75,11 @@
 
   <div id="conteudo">
     <?php
+    session_start();
+     if (!isset($_SESSION['cod'])) {
+      session_destroy();
+      header('Location:index.php');
+    } 
     include("conexao.php");
 
     // Consulta para selecionar todos os usuários da tabela

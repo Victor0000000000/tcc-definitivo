@@ -1,4 +1,11 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['adm'])) {
+  session_destroy();
+  header('Location:index.php');
+} 
+
 include("conexao.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

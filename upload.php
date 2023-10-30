@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!isset($_SESSION['cod'])) {
+  session_destroy();
+  header('Location:index.php');
+} 
 include('conexao.php');
 
 $uploadBemSucedido = false;
