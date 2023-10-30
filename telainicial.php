@@ -8,6 +8,13 @@ if ($_SESSION['adm'] == 0) {
 if ($_SESSION['adm'] == 1) {
   $curtas = "";
 }
+$registro= 0;
+if ($_SESSION['adm'] == 0) {
+  $registro="invisivel";
+} 
+if ($_SESSION['adm'] == 1) {
+  $registro="";
+}
 
 
 //include ("valida_session_perfil.php");
@@ -33,7 +40,7 @@ if (!isset($_SESSION['cod'])) {
 
 <body>
   <header id="header">
-    <a id="logo" href="index.php"><img id="img_logo" src="img/logopng.png"></a>
+    <a id="logo" href="telainicial.php"><img id="img_logo" src="img/logopng.png"></a>
     <nav id="nav">
       <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
         <span id="hamburger"></span>
@@ -46,6 +53,9 @@ if (!isset($_SESSION['cod'])) {
 
        <div class="<?php echo $curtas; ?>"> <li><a class="link-menu" href="curtas.php">Curtas</a></li>
        </div>
+       <div class="<?php echo $registro; ?>"> <li><a class="link-menu" href="registro.php">Contas registradas</a></li>
+       </div>
+
        <li><a class="link-menu" href="oficinas.php">Oficinas</a></li>
        <li><a class="link-menu" href="Galeria.php">Galeria</a></li>
         <li><a class="link-menu" href="premiacao.php">Premiações</a></li>
@@ -123,6 +133,9 @@ if (!isset($_SESSION['cod'])) {
   <div>
   <script src="index-script.js"></script>
   </div>
+    
+  
+
 
 </body>
 </html>
