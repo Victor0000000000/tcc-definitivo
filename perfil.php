@@ -75,7 +75,7 @@ if ($stmt) {
 
 <main>
 <div class="logo-pagina">
-    <img class="logo-apresentacao" src="img/logopreto.jpeg" alt="logo do projeto">
+<img class="logo-apresentacao" src="img/logopreto.PNG" alt="logo do projeto">
 </div>
 
 <div class="card-perfil">

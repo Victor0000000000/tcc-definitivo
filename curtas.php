@@ -42,7 +42,7 @@ echo '<script>alert("Nescessario a criação de conta, voce será redirecionada 
 
 <main>
   <div class="logo-pagina">
-    <img class="logo-apresentacao" src="img/logopreto.PNG" alt="logo do projeto">
+  <img class="logo-apresentacao" src="img/logopreto.PNG" alt="logo do projeto">
   </div>
 
   <form action="pesquisa.php" method="POST">
@@ -50,11 +50,11 @@ echo '<script>alert("Nescessario a criação de conta, voce será redirecionada 
         <select name="genero" class="barra-pesquisa">
           <option selected disabled value="">Genero</option>
           <option value="1">Drama</option>
-          <option value="5">Suspense</option>
-          <option value="4">Terror</option>
-          <option value="6">Romance</option>
-          <option value="3">Comédia</option>
-          <option value="2">Documentario</option>
+          <option value="2">Suspense</option>
+          <option value="3">Terror</option>
+          <option value="4">Romance</option>
+          <option value="5">Comédia</option>
+          <option value="6">Documentario</option>
         </select>
 <select name="tema" class="barra-pesquisa">
           <option selected disabled value="">Tema</option>
@@ -195,10 +195,10 @@ $nivel_necessario = 1;
           <option value="1">Abuso Infantil</option>
           <option value="2">Homofobia</option>
           <option value="3">Intolerância Religiosa</option>
-          <option value="7">Luta Agrária</option>
-          <option value="4">Racismo</option>
-          <option value="5">Violência a mulher</option>
-          <option value="6">Xenofobia</option>
+          <option value="4">Luta Agrária</option>
+          <option value="5">Racismo</option>
+          <option value="6">Violência a mulher</option>
+          <option value="7">Xenofobia</option>
         </select>
 
         <select class="input-modificar" name="genero">

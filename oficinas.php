@@ -26,7 +26,7 @@ include ("valida_session_oficinas.php");
         <li><a class="link-menu" href="curtas.php">Curtas</a></li>
         <li><a class="link-menu" href="premiacao.php">Premiações</a></li>
         <li><a class="link-menu" href="perfil.php">Perfil</a></li>
-        <li><a class="link-menu" href="index.php">Início</a></li>
+        <li><a class="link-menu" href="telainicial.php">Início</a></li>
         <li><a class="link-menu" href="logout.php"><i class="fas fa-sign-out-alt"></i></a></li>
       </ul>
     </nav>

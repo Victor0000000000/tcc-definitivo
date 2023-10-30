@@ -26,7 +26,7 @@ include ("valida_session_premio.php");
         <li><a class="link-menu" href="curtas.php">Curtas</a></li>
         <li><a class="link-menu" href="oficinas.php">Oficinas</a></li>
         <li><a class="link-menu" href="perfil.php">Perfil</a></li>
-        <li><a class="link-menu" href="index.php">Início</a></li>
+        <li><a class="link-menu" href="telainicial.php">Início</a></li>
         <li><a class="link-menu" href="logout.php"><i class="fas fa-sign-out-alt"></i></a></li>
       </ul>
     </nav>
@@ -34,7 +34,7 @@ include ("valida_session_premio.php");
 
 <main> 
 <div class="logo-pagina"> 
-    <img class="logo-apresentacao" src="img/logopreto.jpeg" alt="logo do projeto">
+<a id="logo" href="telainicial.php"><img id="img_logo" src="img/logopng.png"></a>
   </div>
   <!-- SELECT * FROM imgpreio where ano=
   <div class="logo-pagina">

@@ -25,7 +25,7 @@
 							<input type="text" name="nome_aluno" class="campo" placeholder="Digite seu nome" required="text">
 						<br>
 							<p class="titulos">E-mail</p>
-							<input type="Email" name="email_aluno" class="campo" placeholder="Digite sua Senha" required="Email">
+							<input type="Email" name="email_aluno" class="campo" placeholder="Digite seu email" required="Email">
 						<br>
 							<p class="titulos">Senha</p>
 							<input type="password" name="senha_aluno" class="campo" placeholder="Digite uma senha" required="password">
